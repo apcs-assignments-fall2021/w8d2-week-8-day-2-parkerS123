@@ -46,7 +46,9 @@ public class Rational {
         int y = (r.denominator * s.denominator);
 
         Rational t = new Rational(x, y);
-        return t;
+
+        Rational p = simplify(t);
+        return p;
     }
     
     public static Rational multiply(Rational r, Rational s) {
@@ -55,7 +57,8 @@ public class Rational {
         int y = r.denominator * s.denominator;
 
         Rational t = new Rational(x, y);
-        return t;
+        Rational p = simplify(t);
+        return p;
     }
     
     public static Rational divide(Rational r, Rational s) {
@@ -64,7 +67,8 @@ public class Rational {
         int y = r.denominator * s.numerator;
 
         Rational t = new Rational(x, y);
-        return t;
+        Rational p = simplify(t);
+        return p;
     }
 
     // Finds the greatest common factor between a and b
